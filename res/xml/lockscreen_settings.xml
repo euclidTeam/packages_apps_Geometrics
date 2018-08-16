@@ -5,5 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/geometrics_lockscreen_dashboard_title">
 
+    <PreferenceCategory
+        android:title="@string/general_category">
+
+        <com.euclid.support.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_battery_info"
+            android:title="@string/lockscreen_battery_info_title"
+            android:summary="@string/lockscreen_battery_info_summary"
+            android:defaultValue="true" />
+        </PreferenceCategory>
+
 
 </PreferenceScreen>

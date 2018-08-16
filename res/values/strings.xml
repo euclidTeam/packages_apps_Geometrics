@@ -11,4 +11,7 @@
     <string name="geometrics_qs_dashboard_title">Quick Settings</string>
     <string name="geometrics_system_dashboard_title">System</string>
 
+    <!-- Sub category -->
+    <string name="general_category">General</string>
+
 </resources>
