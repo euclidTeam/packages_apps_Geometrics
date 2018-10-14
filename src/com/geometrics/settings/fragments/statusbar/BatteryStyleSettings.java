@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.UserHandle;
+import android.content.Context;
 import android.content.ContentResolver;
 import android.content.res.Resources;
 import androidx.preference.ListPreference;
@@ -48,6 +49,7 @@ public class BatteryStyleSettings extends SettingsPreferenceFragment implements
     private static final String KEY_STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String KEY_STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String KEY_STATUS_BAR_BATTERY_TEXT_CHARGING = "status_bar_battery_text_charging";
+    private static final String TEXT_CHARGING_SYMBOL = "text_charging_symbol";
 
     private static final int BATTERY_STYLE_PORTRAIT = 0;
     private static final int BATTERY_STYLE_TEXT = 4;
@@ -56,6 +58,7 @@ public class BatteryStyleSettings extends SettingsPreferenceFragment implements
     private SystemSettingListPreference mBatteryPercent;
     private SystemSettingListPreference mBatteryStyle;
     private SwitchPreferenceCompat mBatteryTextCharging;
+    private SystemSettingListPreference mChargingSymbol;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -83,6 +86,9 @@ public class BatteryStyleSettings extends SettingsPreferenceFragment implements
         mBatteryTextCharging.setEnabled(batterystyle == BATTERY_STYLE_HIDDEN ||
                 (batterystyle != BATTERY_STYLE_TEXT && batterypercent != 2));
 
+        mChargingSymbol = (SystemSettingListPreference) findPreference("text_charging_symbol");
+        mChargingSymbol.setEnabled(batterystyle == BATTERY_STYLE_TEXT);
+
     }
 
     @Override
@@ -96,6 +102,7 @@ public class BatteryStyleSettings extends SettingsPreferenceFragment implements
                     value != BATTERY_STYLE_TEXT && value != BATTERY_STYLE_HIDDEN);
             mBatteryTextCharging.setEnabled(value == BATTERY_STYLE_HIDDEN ||
                     (value != BATTERY_STYLE_TEXT && batterypercent != 2));
+                    mChargingSymbol.setEnabled(value == BATTERY_STYLE_TEXT);
             return true;
         } else if (preference == mBatteryPercent) {
             int value = Integer.parseInt((String) newValue);
@@ -112,5 +119,13 @@ public class BatteryStyleSettings extends SettingsPreferenceFragment implements
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.GEOMETRICS;
     }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        final Resources res = mContext.getResources();
+
+        Settings.System.putIntForUser(resolver,
+        Settings.System.TEXT_CHARGING_SYMBOL, 1, UserHandle.USER_CURRENT);
+     }
 
 }
