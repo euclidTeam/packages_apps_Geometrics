@@ -61,6 +61,13 @@
             android:summary="@string/qs_tile_layout_summary"
             android:fragment="com.geometrics.settings.fragments.quicksettings.QsTileLayoutSettings" />
 
+        <!-- QS Header -->
+        <Preference
+            android:key="qs_header_image"
+            android:title="@string/qs_header_image_title"
+            android:summary="@string/qs_header_image_summary"
+            android:fragment="com.geometrics.settings.fragments.quicksettings.QsHeaderImageSettings" />
+
         </PreferenceCategory>
 
         <PreferenceCategory

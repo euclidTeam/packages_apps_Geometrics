@@ -8,6 +8,10 @@ import androidx.preference.Preference;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.geometrics.settings.fragments.quicksettings.QsHeaderImageSettings;
+import com.euclid.support.preferences.SystemSettingListPreference;
+
+
 import com.android.settings.R;
 
 public class QuickSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
