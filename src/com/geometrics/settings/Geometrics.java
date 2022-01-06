@@ -41,7 +41,7 @@ public class Geometrics extends SettingsPreferenceFragment {
         addPreferencesFromResource(R.xml.geometrics_settings);
     }
 
-      @Override
+    @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.GEOMETRICS;
     }
