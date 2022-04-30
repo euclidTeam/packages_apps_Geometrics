@@ -261,4 +261,9 @@ SPDX-License-Identifier: Apache-2.0
     <string name="network_traffic_hidearrow">Hide arrows</string>
     <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
 
+    <!-- Qs Transparency -->
+    <string name="qs_cust_category">Qs Customizaions</string>
+    <string name="qs_transparency_summary">Choose how transparent you want your qs to be</string>
+    <string name="qs_transparency_title">Qs Transparency</string>
+
 </resources>
