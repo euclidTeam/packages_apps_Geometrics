@@ -45,6 +45,18 @@
 
         </PreferenceCategory>
 
+        <PreferenceCategory
+            android:title="@string/volume_category">
+
+        <com.euclid.support.preferences.SystemSettingSwitchPreference
+            android:key="volume_rocker_wake"
+            android:title="@string/volume_rocker_wake_title"
+            android:summary="@string/volume_rocker_wake_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        </PreferenceCategory>
+
         <com.euclid.support.preferences.SecureSettingSwitchPreference
             android:key="window_ignore_secure"
             android:title="@string/laboratory_ignore_window_secure_title"
