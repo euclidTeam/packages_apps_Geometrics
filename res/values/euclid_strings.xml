@@ -323,4 +323,8 @@ SPDX-License-Identifier: Apache-2.0
     <string name="status_bar_bluetooth_battery_title">Bluetooth battery status</string>
     <string name="status_bar_bluetooth_battery_summary">Display battery status for the connected bluetooth device, if available</string>
 
+    <!-- Game space -->
+    <string name="game_space_title">Game space</string>
+    <string name="game_space_summary">Enhance your gaming experience</string>
+
 </resources>
