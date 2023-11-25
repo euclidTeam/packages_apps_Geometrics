@@ -33,6 +33,7 @@ import android.view.WindowManagerGlobal;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.euclid.OmniJawsClient;
 import com.android.settings.Utils;
 import android.util.Log;
 
@@ -43,6 +44,11 @@ import java.util.HashMap;
 import java.util.Collections;
 
 public class Lockscreen extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+
+     private static final String KEY_WEATHER = "lockscreen_weather_enabled";
+
+    private Preference mWeather;
+    private OmniJawsClient mWeatherClient;
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -60,5 +66,24 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
 
         getActivity().setTitle(R.string.geometrics_lockscreen_dashboard_title);
 
+        mWeather = (Preference) findPreference(KEY_WEATHER);
+        mWeatherClient = new OmniJawsClient(getContext());
+        updateWeatherSettings();
+
+    }
+
+        private void updateWeatherSettings() {
+        if (mWeatherClient == null || mWeather == null) return;
+
+        boolean weatherEnabled = mWeatherClient.isOmniJawsEnabled();
+        mWeather.setEnabled(weatherEnabled);
+        mWeather.setSummary(weatherEnabled ? R.string.lockscreen_weather_summary :
+            R.string.lockscreen_weather_enabled_info);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateWeatherSettings();
     }
 }
