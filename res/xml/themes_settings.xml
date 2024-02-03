@@ -66,6 +66,12 @@
         android:key="theme"
         android:title="@string/monet_category_title">
 
+        <Preference
+            android:key="udfps_settings"
+            android:title="@string/udfps_settings_title"
+            android:summary="@string/udfps_settings_summary"
+            android:fragment="com.geometrics.settings.fragments.themes.UdfpsSettings" />
+
         <!-- Monet Theme Engine -->
         <Preference
             android:key="monet_settings"
