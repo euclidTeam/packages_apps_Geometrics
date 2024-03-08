@@ -57,6 +57,7 @@ public class Themes extends SettingsPreferenceFragment implements Preference.OnP
         setPreferencesFromResource(R.xml.themes_settings, rootKey);
 
         getActivity().setTitle(R.string.geometrics_themes_dashboard_title);
+        PreferenceScreen prefScreen = getPreferenceScreen();
 
                 mUdfpsCategory = findPreference(UDFPS_CATEGORY);
         if (!CustomUdfpsUtils.hasUdfpsSupport(getContext())) {
