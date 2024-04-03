@@ -20,11 +20,22 @@
     <PreferenceCategory
         android:title="@string/category_name_qs_tiles">
 
-        <com.geometrics.support.SecureSettingListPreference
-            android:key="qs_tile_shape"
-            android:title="@string/qs_tile_shape"
-            android:entries="@array/qs_tile_shape_entries"
-            android:entryValues="@array/qs_tile_shape_values"
-            android:defaultValue="2" />
-    </PreferenceCategory>
+            <com.geometrics.support.preferences.SecureSettingListPreference
+                    android:key="qs_style_round"
+                    android:title="@string/qs_style_title"
+                    android:entries="@array/qs_style_entries"
+                    android:entryValues="@array/qs_style_values"
+                    android:defaultValue="1" />
+
+            <com.geometrics.support.preferences.SecureSettingListPreference
+                    android:key="qs_tile_shape"
+                    android:title="@string/qs_tile_shape"
+                    android:entries="@array/qs_tile_shape_entries"
+                    android:entryValues="@array/qs_tile_shape_values"
+                    android:defaultValue="2" />
+   </PreferenceCategory>
+
+
+
+
 </PreferenceScreen>
