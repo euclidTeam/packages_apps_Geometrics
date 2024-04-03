@@ -4,4 +4,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/qs_category">
+
+	<Preference
+            android:key="qs_panel_options"
+            android:persistent="false"
+            android:title="@string/qs_panel_options_title"
+            android:summary="@string/qs_panel_options_summary"
+            android:fragment="com.geometrics.fragments.QSPanelSettings" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
