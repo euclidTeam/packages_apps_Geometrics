@@ -162,4 +162,10 @@
     <string name="qqs_columns_landscape">QQS columns in landscape</string>
     <string name="qqs_columns_landscape_min" translatable="false">@string/qs_columns_landscape_min</string>
     <string name="qqs_columns_landscape_max" translatable="false">@string/qs_columns_landscape_max</string>
+
+    <!-- Clock position -->
+    <string name="status_bar_clock_position_center">Center</string>
+    <string name="status_bar_clock_position_left">Left</string>
+    <string name="status_bar_clock_position_right">Right</string>
+    <string name="status_bar_clock_position_title">Clock position</string>
 </resources>
