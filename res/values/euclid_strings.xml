@@ -181,8 +181,6 @@ SPDX-License-Identifier: Apache-2.0
     <string name="monet_accurate_shade_title">Accurate shade</string>
     <string name="monet_accurate_shade_summary">Get close to the applied colors on the system</string>
 
-    <string name="enable">Enable</string>
-
     <!-- Font style / Icon pack -->
     <string name="icons_category">Icons</string>
     <string name="fonts_category">Fonts</string>
@@ -359,6 +357,7 @@ SPDX-License-Identifier: Apache-2.0
 
     <!-- UDFPS settings -->
     <string name="enable">Enable</string>
+    <string name="udfps_category">UDFPS</string>
     <string name="udfps_settings_title">UDFPS customization</string>
     <string name="udfps_settings_summary">Customize under-display fingerprint scanner</string>
     <string name="udfps_icon_picker_title">UDFPS icon picker</string>

@@ -2,6 +2,7 @@ package com.geometrics.settings.fragments.themes;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import com.android.internal.util.euclid.udfps.CustomUdfpsUtils;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -37,6 +38,10 @@ import java.util.Collections;
 
 public class Themes extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
+    private static final String UDFPS_CATEGORY = "udfps_category";
+
+    private PreferenceCategory mUdfpsCategory;
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;
@@ -52,6 +57,11 @@ public class Themes extends SettingsPreferenceFragment implements Preference.OnP
         setPreferencesFromResource(R.xml.themes_settings, rootKey);
 
         getActivity().setTitle(R.string.geometrics_themes_dashboard_title);
+
+                mUdfpsCategory = findPreference(UDFPS_CATEGORY);
+        if (!CustomUdfpsUtils.hasUdfpsSupport(getContext())) {
+            prefScreen.removePreference(mUdfpsCategory);
+        }
 
     }
 }
