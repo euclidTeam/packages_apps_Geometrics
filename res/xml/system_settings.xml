@@ -30,6 +30,11 @@
             android:summary="@string/volume_answer_call_summary"
             android:defaultValue="false" />
 
+        <com.euclid.support.preferences.SystemSettingSwitchPreference
+            android:key="pixel_nav_animation"
+            android:title="@string/pixel_navbar_anim_title"
+            android:summary="@string/pixel_navbar_anim_summary"
+            android:defaultValue="true" />
 
         </PreferenceCategory>
 
