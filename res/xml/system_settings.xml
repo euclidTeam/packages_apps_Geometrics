@@ -36,6 +36,13 @@
             android:summary="@string/pixel_navbar_anim_summary"
             android:defaultValue="true" />
 
+        <!-- Component spoofing -->
+        <Preference
+            android:key="spoofing"
+            android:title="@string/spoofing_title"
+            android:summary="@string/spoofing_summary"
+            android:fragment="com.geometrics.settings.fragments.system.Spoofing" />
+
         </PreferenceCategory>
 
 

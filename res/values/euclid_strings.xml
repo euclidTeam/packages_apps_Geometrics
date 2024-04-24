@@ -204,4 +204,29 @@ SPDX-License-Identifier: Apache-2.0
     <string name="font_preview_text">The quick brown\nfox jumps over the\nlazy dog\n\nABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijkl\nmnopqrstuvwxyz\n1234567890</string>
     <string name="apply_button_text">Apply</string>
 
+    <!-- Miscellaneous/Spoofing -->
+    <string name="spoofing_title">Component spoofing</string>
+    <string name="spoofing_summary">Bypass app restrictions by spoofing components</string>
+    <string name="spoofing_system_wide_category">System-Wide</string>
+    <string name="spoofing_pif_toggle_title">Play Integrity fix</string>
+    <string name="spoofing_app_specific_category">App-Specific</string>
+
+    <!-- Google Play Integrity Spoof -->
+    <string name="pi_spoof_title">Enable spoof options</string>
+    <string name="pi_spoof_summary">Enables all the spoof options within the PixelProps</string>
+
+    <!-- GameProps spoofing -->
+    <string name="gameprops_title">Enable GameProps spoofing</string>
+    <string name="gameprops_summary">Enables all the spoof options within the PixelProps</string>
+    <string name="gameprops_load_json_title">Select GameProps JSON File</string>
+    <string name="gameprops_load_json_summary">Pick GameProps JSON file to be used for spoofing games</string>
+
+    <!-- PIF spoofing -->
+    <string name="pif_spoofing_title">Select PIF JSON File</string>
+    <string name="pif_spoofing_summary">Pick PIF JSON file to be used for spoofing play integrity</string>
+
+    <!-- Unlimited google photos storage -->
+    <string name="use_photos_spoof_title">Unlimited Photos storage</string>
+    <string name="use_photos_spoof_summary">Spoof your device as Pixel XL for Google Photos app only to provide unlimited storage for backup</string>
+
 </resources>
