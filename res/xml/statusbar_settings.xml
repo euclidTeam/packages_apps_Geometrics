@@ -27,5 +27,12 @@
         android:fragment="com.geometrics.settings.fragments.statusbar.BatteryStyleSettings" />
     </PreferenceCategory>
 
+    <!-- Network traffic -->
+    <Preference
+        android:key="network_traffic_settings"
+        android:title="@string/network_traffic_settings_title"
+        android:summary="@string/network_traffic_settings_summary"
+        android:fragment="com.geometrics.settings.fragments.statusbar.NetworkTrafficSettings" />
+
     
 </PreferenceScreen>
