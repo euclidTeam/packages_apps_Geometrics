@@ -92,7 +92,8 @@
             android:summary="%s"
             android:defaultValue="0" />
 
-	<com.geometrics.support.preferences.SecureSettingSwitchPreference
+
+	<com.geometrics.support.preferences.SystemSettingSwitchPreference
             android:key="secure_lockscreen_qs_disabled"
             android:title="@string/disable_qs_title"
             android:summary="@string/disable_qs_summary"
