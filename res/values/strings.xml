@@ -87,6 +87,7 @@
     <string name="theme_customization_navbar_summary">Set custom navigation bar style</string>
 
     <!-- UDFPS settings -->
+    <string name="udfps_category">UDFPS</string>
     <string name="enable">Enable</string>
     <string name="udfps_settings_title">UDFPS customization</string>
     <string name="udfps_settings_summary">Customize under-display fingerprint scanner</string>
