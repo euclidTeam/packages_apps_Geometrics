@@ -67,15 +67,15 @@ public class UdfpsSettings extends SettingsPreferenceFragment implements
         final boolean udfpsResPkgInstalled = EuclidUtils.isPackageInstalled(getContext(),
                 "com.euclid.udfps.animations");
         mUdfpsCustomization = (PreferenceCategory) findPreference(UDFPS_CUSTOMIZATION);
-        if (!udfpsResPkgInstalled) {
-            prefSet.removePreference(mUdfpsCustomization);
+        if (!udfpsResPkgInstalled && mUdfpsCustomization != null) {
+        prefSet.removePreference(mUdfpsCustomization);
         }
 
         final boolean udfpsResIconPkgInstalled = EuclidUtils.isPackageInstalled(getContext(),
                 "com.euclid.udfps.icons");
         mUdfpsIcons = (Preference) findPreference(KEY_UDFPS_ICONS);
-        if (!udfpsResIconPkgInstalled) {
-            prefSet.removePreference(mUdfpsIcons);
+        if (!udfpsResIconPkgInstalled && mUdfpsIcons != null) {
+        prefSet.removePreference(mUdfpsIcons);
         }
     }
 
