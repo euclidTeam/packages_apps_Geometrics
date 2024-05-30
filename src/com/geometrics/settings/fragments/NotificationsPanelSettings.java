@@ -34,14 +34,14 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
-public class PowerSettings extends SettingsPreferenceFragment implements
+public class NotificationsPanelSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.power);
+        addPreferencesFromResource(R.xml.notificationspanel);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 

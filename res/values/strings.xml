@@ -3,7 +3,7 @@
     <string name="default_string">Default</string>
     <!-- Categories -->
     <string name="themes_title">Themes</string>
-    <string name="gestures_title">Gestures</string>
+    <string name="notification_title">QS Panel</string>
     <string name="lockscreen_title">Lock screen</string>
     <string name="misc_title">Miscellaneous</string>
     <string name="powermenu_title">Power menu</string>
