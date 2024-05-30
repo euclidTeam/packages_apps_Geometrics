@@ -7,7 +7,6 @@
               android:orientation="vertical"
               android:scrollbars="none"
               android:gravity="center"
-              android:text="@string/app_name"
               tools:context="com.geometrics.settings.GeometricsSettings">
 
     <LinearLayout
@@ -20,9 +19,8 @@
             android:id="@+id/lockscreensettings_card"
             android:layout_width="200dp"
             android:layout_height="400dp"
-            android:layout_marginStart="0dp"
-            android:layout_margin="55dp"
-            android:layout_marginBottom="36.0dip"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="40dp"
             app:cardCornerRadius="30dp"
             app:cardElevation="0dp"
             app:strokeColor="?android:attr/textColorPrimary"
@@ -31,10 +29,8 @@
             <com.geometrics.settings.Utils.WallpaperView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/wallpaper_view"
                 android:contentDescription="@null"
                 android:elevation="0dp"
-                android:foreground="@drawable/wallpaper_view"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:scaleType="centerCrop" />
@@ -45,8 +41,8 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/lockscreen_clock_preview"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="googlesans-flex"
                 android:text="@string/lockscreen_title"
                 android:textColor="#FFFFFFFF"
@@ -59,8 +55,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="100dp"
                 android:fontFamily="@*android:string/config_clockFontFamily"
                 android:format12Hour="hh\nmm"
                 android:format24Hour="hh\nmm"
@@ -74,71 +70,56 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lockscreen_clock_preview"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="160dp"
-                android:layout_marginTop="550dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="350dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_lock"
                 android:tint="#FFFFFFFF" />
             </com.google.android.material.card.MaterialCardView>
 
-            <FrameLayout
-                android:id="@+id/horizontal_card_layout"
-                android:layout_width="match_parent"
+            <!-- Bottom Menu -->
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:gravity="center"
                 android:background="@drawable/geometrics_card_bg"
-                app:cardBackgroundColor="#00000000"
-                android:orientation="horizontal">
+                android:layout_marginBottom="30dp">
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/themesettings_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="#00000000"
-                    android:layout_weight="1"
-                    android:src="@drawable/geometrics_dark__card_themes"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="left"
-                    android:layout_margin="15dp" />
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/geometrics_dark__card_themes"
+                    android:contentDescription="Geometric Icon"
+                    android:layout_margin="10dp"/>
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/statusbarsettings_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="#00000000"
-                    android:layout_weight="1"
-                    android:src="@drawable/geometrics_dark__card_statusbar"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="37dp"/>
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/geometrics_dark__card_statusbar"
+                    android:contentDescription="Second Icon"
+                    android:layout_margin="10dp"/>
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/notificationspanelsettings_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="#00000000"
-                    android:layout_weight="1"
-                    android:src="@drawable/geometrics_dark__card_notificationpanel"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="35dp" />
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/geometrics_dark__card_notificationpanel"
+                    android:contentDescription="Third Icon"
+                    android:layout_margin="10dp"/>
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/miscsettings_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="#00000000"
-                    android:layout_weight="1"
-                    android:src="@drawable/geometrics_dark__card_misc"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="105dp" />
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/geometrics_dark__card_misc"
+                    android:contentDescription="Settings Icon"
+                    android:layout_margin="10dp"/>
 
-                </FrameLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
