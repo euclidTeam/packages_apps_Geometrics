@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.card.MaterialCardView;
@@ -48,6 +49,18 @@ public class GeometricsSettings extends SettingsPreferenceFragment implements Vi
 
         mMiscSettingsCard = view.findViewById(R.id.miscsettings_card);
         mMiscSettingsCard.setOnClickListener(this);
+
+        // Set up the back button handling
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (getFragmentManager() != null && getFragmentManager().getBackStackEntryCount() > 0) {
+                    getFragmentManager().popBackStack();
+                } else {
+                    requireActivity().finish();
+                }
+            }
+        });
     }
 
     @Override
