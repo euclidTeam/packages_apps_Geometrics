@@ -5,5 +5,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/geometrics_themes_dashboard_title">
 
+    android:title="@string/tenx_title">
+
+    <PreferenceCategory
+        android:key="theme"
+        android:title="@string/monet_category_title">
+
+        <!-- Monet Theme Engine -->
+        <Preference
+            android:key="monet_settings"
+            android:title="@string/monet_settings_title"
+            android:summary="@string/monet_settings_sammary"
+            android:fragment="com.geometrics.settings.fragments.themes.MonetSettings" />
+
+        </PreferenceCategory>
+
+
+
 
 </PreferenceScreen>

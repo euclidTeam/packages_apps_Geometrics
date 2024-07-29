@@ -14,5 +14,6 @@
     <!-- Sub category -->
     <string name="general_category">General</string>
     <string name="power_category">Power Menu</string>
+    <string name="monet_category_title">Monet Settings</string>
 
 </resources>
