@@ -65,6 +65,9 @@ public class MonetSettings extends DashboardFragment implements
             "android.theme.customization.chroma_factor";
     private static final String OVERLAY_TINT_BACKGROUND =
             "android.theme.customization.tint_background";
+    private static final String OVERLAY_SECONDARY_COLOR =
+            "android.theme.customization.secondary_color";
+
     private static final String COLOR_SOURCE_PRESET = "preset";
     private static final String COLOR_SOURCE_HOME = "home_wallpaper";
     private static final String COLOR_SOURCE_LOCK = "lock_wallpaper";
@@ -77,6 +80,7 @@ public class MonetSettings extends DashboardFragment implements
     private static final String PREF_LUMINANCE_FACTOR = "luminance_factor";
     private static final String PREF_CHROMA_FACTOR = "chroma_factor";
     private static final String PREF_TINT_BACKGROUND = "tint_background";
+    private static final String PREF_SECONDARY_COLOR = "secondary_color";
 
     private SystemSettingListPreference mThemeStylePref;
     private SystemSettingListPreference mColorSourcePref;
@@ -86,6 +90,7 @@ public class MonetSettings extends DashboardFragment implements
     private CustomSeekBarPreference mLuminancePref;
     private CustomSeekBarPreference mChromaPref;
     private SystemSettingSwitchPreference mTintBackgroundPref;
+    private ColorPickerPreference mSecondaryColor;
 
     @Override
     protected int getPreferenceScreenResId() {
@@ -104,6 +109,7 @@ public class MonetSettings extends DashboardFragment implements
         mLuminancePref = findPreference(PREF_LUMINANCE_FACTOR);
         mChromaPref = findPreference(PREF_CHROMA_FACTOR);
         mTintBackgroundPref = findPreference(PREF_TINT_BACKGROUND);
+        mSecondaryColor = findPreference(PREF_SECONDARY_COLOR);
 
         updatePreferences();
 
@@ -115,6 +121,7 @@ public class MonetSettings extends DashboardFragment implements
         mLuminancePref.setOnPreferenceChangeListener(this);
         mChromaPref.setOnPreferenceChangeListener(this);
         mTintBackgroundPref.setOnPreferenceChangeListener(this);
+        mSecondaryColor.setOnPreferenceChangeListener(this);
 
     }
 
@@ -140,6 +147,7 @@ public class MonetSettings extends DashboardFragment implements
                 final boolean tintBG = object.optInt(OVERLAY_TINT_BACKGROUND, 0) == 1;
                 final float lumin = (float) object.optDouble(OVERLAY_LUMINANCE_FACTOR, 1d);
                 final float chroma = (float) object.optDouble(OVERLAY_CHROMA_FACTOR, 1d);
+                final int secondaryColor = object.optInt(OVERLAY_SECONDARY_COLOR);
                 // style handling
                 boolean styleUpdated = false;
                 if (style != null && !style.isEmpty()) {
@@ -174,6 +182,9 @@ public class MonetSettings extends DashboardFragment implements
                 }
                 mAccentBackgroundPref.setChecked(bgEnabled);
                 mBgColorPref.setEnabled(bgEnabled);
+                if (secondaryColor != 0) {
+                    mSecondaryColor.setNewPreviewColor(secondaryColor);
+                }
                 // etc
                 int luminV = 0;
                 if (lumin > 1d) luminV = Math.round((lumin - 1f) * 100f);
@@ -226,6 +237,10 @@ public class MonetSettings extends DashboardFragment implements
         } else if (preference == mTintBackgroundPref) {
             boolean value = (Boolean) newValue;
             setTintBackgroundValue(value);
+            return true;
+        } else if (preference == mSecondaryColor) {
+            int value = (Integer) newValue;
+            setSecondaryColor(value);
             return true;
         }
         return false;
@@ -347,6 +362,16 @@ public class MonetSettings extends DashboardFragment implements
             putSettingsJson(object);
         } catch (JSONException | IllegalArgumentException ignored) {}
     }
+
+    private void setSecondaryColor(int color) {
+        try {
+            JSONObject object = getSettingsJson();
+            if (color != 0) object.putOpt(OVERLAY_SECONDARY_COLOR, color);
+            else object.remove(OVERLAY_SECONDARY_COLOR);
+            putSettingsJson(object);
+        } catch (JSONException | IllegalArgumentException ignored) {}
+    }
+
 
     @Override
     public int getMetricsCategory() {
