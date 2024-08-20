@@ -51,6 +51,12 @@
             android:summary="@string/laboratory_ignore_window_secure_summary"
             android:defaultValue="false"/>
 
+        <com.euclid.support.preferences.SystemSettingSwitchPreference
+            android:key="no_storage_restrict"
+            android:title="@string/no_storage_restrict_title"
+            android:summary="@string/no_storage_restrict_summary"
+            android:defaultValue="false"/>
+
         <Preference
             android:key="game_settings"
             android:title="@string/game_space_title"
