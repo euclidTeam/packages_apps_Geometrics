@@ -181,6 +181,8 @@ SPDX-License-Identifier: Apache-2.0
     <string name="monet_accurate_shade_title">Accurate shade</string>
     <string name="monet_accurate_shade_summary">Get close to the applied colors on the system</string>
 
+    <string name="enable">Enable</string>
+
     <!-- Font style / Icon pack -->
     <string name="icons_category">Icons</string>
     <string name="fonts_category">Fonts</string>
@@ -309,5 +311,10 @@ SPDX-License-Identifier: Apache-2.0
     <string name="qs_header_needs_gallery">You must install a gallery app!</string>
     <string name="qs_header_offset_title">Header image offset</string>
     <string name="qs_header_offset_summary">Adjust the image header size</string>
+
+    <!-- Units -->
+    <string name="unit_seconds">seconds</string>
+    <string name="unit_milliseconds">milliseconds</string>
+    <string name="unit_pixels">dp</string>
 
 </resources>
