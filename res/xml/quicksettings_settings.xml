@@ -61,6 +61,12 @@
             android:summary="@string/qs_tile_layout_summary"
             android:fragment="com.geometrics.settings.fragments.quicksettings.QsTileLayoutSettings" />
 
+        <!-- QS Tiles haptic -->
+        <com.euclid.support.preferences.SystemSettingSwitchPreference
+            android:key="qs_tiles_haptic_feedback"
+            android:title="@string/qs_tiles_haptic_feedback_title"
+            android:defaultValue="false" />
+
         <!-- QS Header -->
         <Preference
             android:key="qs_header_image"

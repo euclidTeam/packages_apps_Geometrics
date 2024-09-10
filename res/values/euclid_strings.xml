@@ -294,6 +294,9 @@ SPDX-License-Identifier: Apache-2.0
     <string name="qs_tile_ui_style_a11_square">Square tiles</string>
     <string name="qs_tile_ui_style_a11_mix">Circle &amp; Square tiles</string>
 
+    <!-- QS Tiles haptic -->
+    <string name="qs_tiles_haptic_feedback_title">Vibrate on touching QS tiles</string>
+
     <!-- QS Header -->
     <string name="qs_header_image_title">Header image</string>
     <string name="qs_header_image_summary">Select QS background header image</string>
