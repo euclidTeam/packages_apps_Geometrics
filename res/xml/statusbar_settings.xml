@@ -13,7 +13,9 @@
             android:key="icon_manager"
             android:title="@string/icon_manager_title"
             android:summary="@string/icon_manager_summary">
-            <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.systemui"
+                    android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
         </Preference>
 
         <!-- Bluetooth battery status -->
