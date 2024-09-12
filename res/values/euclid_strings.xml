@@ -268,10 +268,6 @@ SPDX-License-Identifier: Apache-2.0
     <string name="qs_transparency_summary">Choose how transparent you want your qs to be</string>
     <string name="qs_transparency_title">Qs Transparency</string>
 
-    <!-- QS Dual Tone Colors -->
-    <string name="qs_dual_tone_title">Dual tone themed</string>
-    <string name="qs_dual_tone_summary">Use dual tone background colors instead of AOSP single tone</string>
-
     <!-- QS tiles layout  -->
     <string name="qs_tile_layout_title">QS tiles layout</string>
     <string name="qs_tile_layout_summary">Customize tiles layout in QS panel</string>
@@ -360,5 +356,4 @@ SPDX-License-Identifier: Apache-2.0
     <!-- WiFi Standard icon -->
     <string name="wifi_standard_icon_title">WiFi standard</string>
     <string name="wifi_standard_icon_summary">Display WiFi standard next to WiFi signal</string>
-
 </resources>
