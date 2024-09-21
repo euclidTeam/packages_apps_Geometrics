@@ -78,8 +78,12 @@
         <Preference
             android:key="game_settings"
             android:title="@string/game_space_title"
-            android:summary="@string/game_space_summary"
-            settings:controller="com.geometrics.settings.fragments.system.GameSpaceController">
-            </Preference>
+            android:summary="@string/game_space_summary">
+
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="io.chaldeaprjkt.gamespace"
+                android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
+         </Preference>
 
 </PreferenceScreen>
